@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>WebGL</title>
+        <link rel="icon" type="image/png" href="images/favicon.png"/>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overflow-y: hidden;
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif;
+            }
+
+            #mainDisplay {
+                position: absolute;
+                pointer-events: none;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            #devDisplay {
+                position: absolute;
+                pointer-events: none;
+                top: 0;
+                left: 0;
+                margin: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="game"></canvas>
+        <div id="mainDisplay">Press P to start and pause the rendering</div>
+        <div id="devDisplay"></div>
+        <script src='js/bundle.js'/></script>
+    </body>
+</html>

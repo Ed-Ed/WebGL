@@ -1,0 +1,33 @@
+{
+  "name": "webgl-engine",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf public/js",
+    "dev:frontend": "NODE_ENV=development webpack --watch",
+    "dev:backend": "ts-node www/server.ts",
+    "dev": "yarn clean && concurrently \"yarn dev:frontend\" \"yarn dev:backend\"",
+    "build:frontend": "NODE_ENV=production webpack",
+    "build:backend": "",
+    "build": "yarn clean && yarn build:frontend",
+    "start": ""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/express": "^4.17.0",
+    "@types/gl-matrix": "^2.4.5",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "express": "^4.17.0",
+    "gl-matrix": "^3.0.0"
+  }
+}
